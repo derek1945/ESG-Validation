@@ -32,10 +32,10 @@ fx_orig = 1/ read_csv_to_mat('FX_Rate_Orig.csv')
 # %%
 fig, axs = plt.subplots(1, 2, figsize=(10, 5), sharey=True)
 plot_percentile(axs[0], fx_orig)
-axs[0].set_title('Original Correlation', fontsize=10)
+axs[0].set_title("Corr(USD NIR, HKD NIR) = Moody's assumption", fontsize=10)
 axs[0].set_ylabel('USD/HKD FX rate', fontsize=10)
 plot_percentile(axs[1], fx)
-axs[1].set_title('Correlation = 0.95', fontsize=10)
+axs[1].set_title('Corr(USD NIR, HKD NIR) = 0.95', fontsize=10)
 axs[1].tick_params(axis='y', which='both', labelleft=False)
 fig.suptitle('Percentile plot - USD/HKD FX rate')
 
